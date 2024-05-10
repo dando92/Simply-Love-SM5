@@ -3,7 +3,7 @@ if not SYNCMAN or not SYNCMAN:IsEnabled() then
   return Def.Actor{}
 end
 
-local MAX_PLAYER_COUNT = 6
+local MAX_PLAYER_COUNT = 8
 local ROWS = 3
 local COLS = 2
 local CELL_WIDTH = 110
@@ -35,7 +35,7 @@ local t = Def.ActorFrame{
       if i <= #scores then
         local score = scores[i]
         local color = score.failed and color("1,0.3,0.3,0.8") or Color.White
-        playerNameTexts[i]:settext(score.playerName):diffuse(color)
+        playerNameTexts[i]:settext(string.sub(score.playerName, 1, 12) .. (string.len(score.playerName) > 12 and "..." or "")):diffuse(color)
         scoreTexts[i]:settext(score.score):diffuse(color)
       else
         playerNameTexts[i]:settext("")
