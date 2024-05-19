@@ -481,27 +481,29 @@ local Overrides = {
 	-------------------------------------------------------------------------
 	Hide = {
 		SelectType = "SelectMultiple",
-		Values = { "Targets", "SongBG", "Combo", "Lifebar", "Score", "Danger", "ComboExplosions" },
+		Values = { "Targets", "Lights", "SongBG", "Combo", "Lifebar", "Score", "Danger", "ComboExplosions" },
 		LoadSelections = function(self, list, pn)
 			local mods = SL[ToEnumShortString(pn)].ActiveModifiers
 			list[1] = mods.HideTargets or false
-			list[2] = mods.HideSongBG  or false
-			list[3] = mods.HideCombo   or false
-			list[4] = mods.HideLifebar or false
-			list[5] = mods.HideScore   or false
-			list[6] = mods.HideDanger  or false
-			list[7] = mods.HideComboExplosions or false
+			list[2] = mods.HideLights  or false
+			list[3] = mods.HideSongBG  or false
+			list[4] = mods.HideCombo   or false
+			list[5] = mods.HideLifebar or false
+			list[6] = mods.HideScore   or false
+			list[7] = mods.HideDanger  or false
+			list[8] = mods.HideComboExplosions or false
 			return list
 		end,
 		SaveSelections = function(self, list, pn)
 			local mods, playeroptions = GetModsAndPlayerOptions(pn)
 			mods.HideTargets = list[1]
-			mods.HideSongBG  = list[2]
-			mods.HideCombo   = list[3]
-			mods.HideLifebar = list[4]
-			mods.HideScore   = list[5]
-			mods.HideDanger  = list[6]
-			mods.HideComboExplosions = list[7]
+			mods.HideLights   = list[2]
+			mods.HideSongBG  = list[3]
+			mods.HideCombo   = list[4]
+			mods.HideLifebar = list[5]
+			mods.HideScore   = list[6]
+			mods.HideDanger  = list[7]
+			mods.HideComboExplosions = list[8]
 
 			playeroptions:Dark(mods.HideTargets and 1 or 0)
 			playeroptions:Cover(mods.HideSongBG and 1 or 0)

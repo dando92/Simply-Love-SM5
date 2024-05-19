@@ -51,6 +51,7 @@ for player in ivalues(Players) do
 	-- Tournament Mode modifications. Put this before everything as it sets
 	-- player mods and other actors below might depend on it.
 	t[#t+1] = LoadActor("./PerPlayer/TournamentMode.lua", player)
+	t[#t+1] = LoadActor("./PerPlayer/HideLights.lua", player)
 
 	t[#t+1] = LoadActor("./PerPlayer/UpperNPSGraph.lua", player)
 	t[#t+1] = LoadActor("./PerPlayer/Score.lua", player)
