@@ -30,6 +30,7 @@ local permitted_profile_settings = {
 	-- OptionRows that appear in SL's second page of PlayerOptions
 
 	HideTargets          = "boolean",
+	HideLights           = "boolean",
 	HideSongBG           = "boolean",
 	HideCombo            = "boolean",
 	HideLifebar          = "boolean",

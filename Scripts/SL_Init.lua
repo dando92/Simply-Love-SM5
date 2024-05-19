@@ -15,6 +15,7 @@ local PlayerDefaults = {
 				VisualDelay = "0ms",
 
 				HideTargets = false,
+				HideLights = false,
 				HideSongBG = false,
 				HideCombo = false,
 				HideLifebar = false,
