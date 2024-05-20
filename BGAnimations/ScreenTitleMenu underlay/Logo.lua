@@ -53,7 +53,7 @@ if ThemePrefs.Get("VisualStyle") ~= "SRPG7" then
 	-- decorative arrows for current game (dance, pump, techno, etc.)
 	af[#af+1] = LoadActor(resolved_path)..{
 		InitCommand=function(self)
-			self:y(-16)
+			self:y(75)
 
 			-- use ActorUtil to resolve the path and find out if it's a png or a directory
 			-- if it's a png, scale it
