@@ -24,7 +24,13 @@ elseif not PREFSMAN:GetPreference("EventMode") then
 	text = THEME:GetString("Stage", "Stage") .. " " .. tostring(SL.Global.Stages.PlayedThisGame + 1)
 
 else
-	text = THEME:GetString("Stage", "Event")
+	local current_song = GAMESTATE:GetCurrentSong()
+	local group_name = current_song:GetGroupName()
+	if string.find(string.lower(group_name), "eurocup 2024") then
+		text = "Eurocup 2024"
+	else
+		text = THEME:GetString("Stage", "Event")
+	end
 end
 
 InitializeMeasureCounterAndModsLevel(SongNumberInCourse)
