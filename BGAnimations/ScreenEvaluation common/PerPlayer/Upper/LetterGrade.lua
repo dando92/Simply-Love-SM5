@@ -9,6 +9,12 @@ if SYNCMAN and SYNCMAN:IsEnabled() then
     local white_count = ex_counts["W1"]
     local ExScore, ActualPoints, ActualPossible = CalculateExScore(player)
 
+	if ThemePrefs.Get("ScoringSystem") == "ITG" then
+		white_count = 0
+		ActualPoints = playerStats:GetActualDancePoints()
+		ActualPossible = playerStats:GetPossibleDancePoints()
+	end	
+
 	-- Broadcast final score for each player, used by syncstart-web to save scores
 	if GAMESTATE:IsCourseMode() then
 		SYNCMAN:BroadcastFinalCourseScore(playerStats, white_count, ActualPoints, ActualPossible)
