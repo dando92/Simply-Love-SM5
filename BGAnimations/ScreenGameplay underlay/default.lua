@@ -52,7 +52,7 @@ for player in ivalues(Players) do
 	-- player mods and other actors below might depend on it.
 	t[#t+1] = LoadActor("./PerPlayer/TournamentMode.lua", player)
 	t[#t+1] = LoadActor("./PerPlayer/HideLights.lua", player)
-
+	t[#t+1] = LoadActor("./PerPlayer/SyncStartScoreUpdate.lua", player)
 	t[#t+1] = LoadActor("./PerPlayer/UpperNPSGraph.lua", player)
 	t[#t+1] = LoadActor("./PerPlayer/Score.lua", player)
 	t[#t+1] = LoadActor("./PerPlayer/DifficultyMeter.lua", player)
