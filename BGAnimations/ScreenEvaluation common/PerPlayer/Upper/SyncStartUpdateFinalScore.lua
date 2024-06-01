@@ -10,7 +10,7 @@ if SYNCMAN and SYNCMAN:IsEnabled() then
 	local percent = ExScore
 
 	if ThemePrefs.Get("ScoringSystem") == "ITG" then
-		local dance_points = pss:GetPercentDancePoints()
+		local dance_points = playerStats:GetPercentDancePoints()
 		percent = FormatPercentScore( dance_points ):sub(1,-2)
 		white_count = 0
 		ActualPoints = playerStats:GetActualDancePoints()
