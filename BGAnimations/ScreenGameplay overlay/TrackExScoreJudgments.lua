@@ -121,19 +121,6 @@ return Def.Actor{
 
         local ExScore, ActualPoints, ActualPossible = CalculateExScore(player)
 
-        -- only run in modified ITGmania build
-        if SYNCMAN and SYNCMAN:IsEnabled() then
-			local white_count = storage.ex_counts.W1
-            -- Broadcast score update
-			if ThemePrefs.Get("ScoringSystem") == "ITG" then
-				white_count = 0
-				ActualPoints = stats:GetActualDancePoints()
-				ActualPossible = stats:GetPossibleDancePoints()
-			end	
-
-			SYNCMAN:BroadcastScoreChange(stats, white_count, ActualPoints, ActualPossible)
-        end
-
 		if count_updated then
             -- Broadcast so other elements on ScreenGameplay can process the updated count.
 			MESSAGEMAN:Broadcast(
