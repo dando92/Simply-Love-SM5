@@ -4,7 +4,7 @@ if not SYNCMAN or not SYNCMAN:IsEnabled() then
 end
 
 local MAX_PLAYER_COUNT = 8
-local ROWS = 3
+local ROWS = 4
 local COLS = 2
 local CELL_WIDTH = 110
 local CELL_HEIGHT = 20
