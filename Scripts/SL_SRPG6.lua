@@ -1,3 +1,35 @@
+SL.EUROCUP = {
+	Colors = {
+		"#4eb1f9",
+		"#4baff6",
+		"#49adf2",
+		"#46acef",
+		"#44aaec",
+		"#41a8e9",
+		"#3fa6e5",
+		"#3da4e2",
+		"#3aa3df",
+		"#38a1db",
+		"#369fd8",
+		"#349dd5",
+	},
+	DecorativeColors = {
+		"#4eb1f9",
+		"#4baff6",
+		"#49adf2",
+		"#46acef",
+		"#44aaec",
+		"#41a8e9",
+		"#3fa6e5",
+		"#3da4e2",
+		"#3aa3df",
+		"#38a1db",
+		"#369fd8",
+		"#349dd5",
+	},
+	TextColor = "#ffffff",
+}
+
 SL.SRPG8 = {
 	Colors = {
 		            ----------+--------------
