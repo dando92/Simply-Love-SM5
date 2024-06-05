@@ -13,7 +13,14 @@ function GetHexColor( n, decorative )
 	if style == "SRPG7" then
 		colorTable = SL.SRPG7.Colors
 	end
-
+	if style == "Eurocup" then
+		if decorative then
+			colorTable = SL.EUROCUP.DecorativeColors
+		else
+			colorTable = SL.EUROCUP.Colors
+		end
+		
+	end
 	-- use the number passed in to lookup a color in the corresponding color table
 	-- ensure the index is kept in bounds via modulo operation
 	local clr = ((n - 1) % #colorTable) + 1
