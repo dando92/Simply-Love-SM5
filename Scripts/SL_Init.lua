@@ -475,8 +475,7 @@ SL = {
 	--              (either success or failure).
 	-- If a request fails, there will be another key:
 	--    ErrorMessage: string, the reasoning for the failure.
-	Downloads = {},
-	StageStartTime = 0,
+	Downloads = {}
 }
 
 
