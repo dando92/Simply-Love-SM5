@@ -49,6 +49,17 @@ af[#af+1] = Def.Sprite{
 }
 
 
+if ThemePrefs.Get("VisualStyle") == "Eurocup" then
+	af[#af+1] = Def.Sprite {
+			Texture=THEME:GetPathG("", "_VisualStyles/".. ThemePrefs.Get("VisualStyle") .."/pedro 20x5.png"),
+			InitCommand=function(self)
+				self:zoom(0.24):vertalign(top)
+				self:y(-17):x(-3):shadowlength(0.75)
+			   self:SetAllStateDelays(0.075)
+			end
+		 }
+end
+
 if ThemePrefs.Get("VisualStyle") ~= "SRPG7" then
 	-- decorative arrows for current game (dance, pump, techno, etc.)
 	af[#af+1] = LoadActor(resolved_path)..{
