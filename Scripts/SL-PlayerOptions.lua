@@ -802,6 +802,17 @@ local Overrides = {
 		Values = { "Standard", "Surround", "Vertical" },
 	},
 	-------------------------------------------------------------------------
+	SyncStartEnabled = {
+		OneChoiceForAllPlayers = true,
+		Default = false,
+		Choices =  { THEME:GetString("ThemePrefs","No"), THEME:GetString("ThemePrefs", "Yes") },
+		Values  = { true, false },
+		SaveSelections = function(self, list, pn)
+			if list[1] then SYNCMAN:Disable() end
+			if list[2] then SYNCMAN:Enable() end
+		end
+	},
+	-------------------------------------------------------------------------
 	LaneCover = {
 		LayoutType = "ShowOneInRow",
 		Choices = function()
