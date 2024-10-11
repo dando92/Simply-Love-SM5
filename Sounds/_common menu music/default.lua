@@ -1,6 +1,7 @@
 local songs = {
 	Hearts = "feel",
 	Arrows = "cloud break",
+	ITG = "cloud break",
 	Eurocup = "pedro",
 	Bears  = "crystalis",
 	Ducks  = "Xuxa fami VRC6",
